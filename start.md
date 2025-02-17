@@ -38,8 +38,8 @@ dependencies {
 Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока **dependencies { ... }**
 
 > Также здесь необходимо явно добавить транзитивные зависимости библиотек
-```
 
+```
 // Ecom Sdk
 implementation(files("../libs/ecomsdk-X.Y.Z.aar"))
 
@@ -81,6 +81,7 @@ implementation("com.facebook.shimmer:shimmer:0.5.0")
 implementation("com.google.dagger:dagger:2.48")
 ksp("com.google.dagger:dagger-compiler:2.48")
 ```
+
 В приведенном выше примере указан путь до aar-файлов, находящихся в директории libs проекта. Если вы разместили их в другом месте, то нужно будет указать ваш путь до файлов. Подробнее смотрите в [документации для Android](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
 
 ## Настройка SDK
