@@ -3,9 +3,9 @@
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
 ---
 # Сценарий оплаты
-Для оплаты используется метод `pay`
+Для запуска сценария оплаты SDK необходимо вызвать метод **pay** и передать в него **[EcomSdkSetupConfig](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdksetupconfig)**
 
-> Обязательно корректно укажите значение параметра appPackageName. В противном случае при возврате из сбола после оплаты, если будет допущена ошибка в схеме, поднимется шторка с вариантами приложений для продолжения оплаты. Таким образом, сценарий разорвется.
+> Обязательно корректно укажите значение параметра *appPackageName*. В противном случае при возврате из сбола после оплаты, если будет допущена ошибка в схеме, поднимется шторка с вариантами приложений для продолжения оплаты. Таким образом, сценарий разорвется.
 
 ### Kotlin
 ```
@@ -72,6 +72,3 @@ EcomSdkMerchantOptionsConfig ecomSdkMerchantOptionsConfig =
 
 EcomSdk.Companion.getInstance().pay(ecomSdkMerchantOptionsConfig);
 ```
-
-
-
