@@ -51,12 +51,12 @@ import modern.payments.ecomAndroid.api.EcomSdkMerchantOptionsConfig.*;
 
 EcomSdkMerchantOptionsConfig ecomSdkMerchantOptionsConfig =
         new EcomSdkMerchantOptionsConfig(
-                getBaseContext(),
-                BANK_INVOICE_ID,
-                API_KEY,
-                MERCHANT_LOGIN,
-                ORDER_NUMBER,
-                PACKAGE_NAME,
+            getBaseContext(),
+            BANK_INVOICE_ID,
+            API_KEY,
+            MERCHANT_LOGIN,
+            ORDER_NUMBER,
+            PACKAGE_NAME,
                 result -> {
                     if (result instanceof EcomSdkResult.Success) {
                     //do somethingOnSuccess
@@ -68,7 +68,8 @@ EcomSdkMerchantOptionsConfig ecomSdkMerchantOptionsConfig =
                     //do somethingOnError
                     }
                     return null;
-                });
+                }
+        );
 
 EcomSdk.Companion.getInstance().pay(ecomSdkMerchantOptionsConfig);
 ```
