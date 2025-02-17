@@ -47,6 +47,7 @@ enum class EcomSdkFeature {
 
 ## EcomSdkMerchantOptionsConfig
 #### Конфиг для запуска сценария оплаты методом *pay()*
+
 |Параметр|Тип|Обязательный|Описание|
 |---|---|---|---|
 |context|Context|Да|ActivityContext приложения|
