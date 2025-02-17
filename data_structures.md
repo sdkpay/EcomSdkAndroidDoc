@@ -6,13 +6,16 @@
 
 ## EcomSdkSetupConfig
 #### Конфиг для инициализации SDK
-Параметр | Тип | Обязательный | Описание
---- | --- | --- | --- |
-context|Context|Да|Context или ApplicationContext приложения
-stage|EcomSdkStage|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://github.com/sdkpay/EcomSdkAndroidDocs/edit/main/data_structures.md#ecomsdkstage)
-disabledFeatures|List\<EcomSdkFeature\>|Нет|Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://github.com/sdkpay/EcomSdkAndroidDocs/edit/main/data_structures.md#ecomsdkfeature)
-enableLoggingByMerchant|Boolean|Нет|Флаг включенного логирования для партнера. Дефолтное значение true
-callback|(Boolean) -> Unit|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true
+| Параметр               | Тип                    | Обязательный | Описание |
+| ---------------------- | ---------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| context                | Context                | Да           | Context или ApplicationContext приложения                                                                         
+                                                                                           |
+| stage                  | EcomSdkStage           | Да           | Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://github.com/sdkpay/EcomSdkAndroidDocs/edit/main/data_structures.md#ecomsdkstage)   |
+| disabledFeatures       | List\<EcomSdkFeature\> | Нет          | Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://github.com/sdkpay/EcomSdkAndroidDocs/edit/main/data_structures.md#ecomsdkfeature) |
+| enableLoggingByMerchant| Boolean                | Нет          | Флаг включенного логирования для партнера. Дефолтное значение true                                                
+                                                                                           |
+| callback               | (Boolean) -> Unit      | Да           | Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true                                         
+                                                                                           |
 
 ## EcomSdkStage
 #### Стенды SDK
