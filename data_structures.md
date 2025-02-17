@@ -7,13 +7,13 @@
 ## EcomSdkSetupConfig
 #### Конфиг для инициализации SDK
 
-| Параметр               | Тип                    | Обязательный |
-| ---------------------- | ---------------------- | ------------ |
-| context                | Context                | Да           |
-| stage                  | EcomSdkStage           | Да           |
-| disabledFeatures       | List\<EcomSdkFeature\> | Нет          |
-| enableLoggingByMerchant| Boolean                | Нет          |
-| callback               | (Boolean) -> Unit      | Да           |
+|Параметр|Тип|Обязательный|Описание|
+|---|---|---|---|
+|context|Context|Да|Context или ApplicationContext приложения|
+|stage|EcomSdkStage|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkstage)|
+|disabledFeatures|List\<EcomSdkFeature\>|Нет|Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkfeature)|
+|enableLoggingByMerchant|Boolean|Нет|Флаг включенного логирования для партнера. Дефолтное значение true|
+|callback|(Boolean) -> Unit|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
 
 ## EcomSdkStage
 #### Стенды SDK
@@ -56,7 +56,7 @@ enum class EcomSdkFeature {
 |merchantLogin|String|Да|Логин для работы с сервисами платежного шлюза|
 |orderNumber|String|Да|Уникальный идентификатор заказа в системе Партнера|
 |appPackageName|String|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
-|callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>[EcomSdkResult](https://github.com/sdkpay/EcomSdkAndroidDocs/edit/main/data_structures.md#ecomsdkresult)|
+|callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkresult)|
 
 ## EcomSdkResult
 #### Результат выполнения метода *pay()*
