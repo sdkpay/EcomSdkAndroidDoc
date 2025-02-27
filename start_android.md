@@ -1,6 +1,9 @@
-# EcomSdkAndroidDocs
+# [EcomSdkAndroidDocs](https://sdkpay.github.io/EcomSdkAndroidDocs)
 
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
+---
+## Платформа для интеграции SDK
+###### [Android] | [IOS] | [Flutter] | [React-Native]
 ---
 # Начало работы
 > Минимальная версия SDK - API 24
