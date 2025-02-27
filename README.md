@@ -1,6 +1,6 @@
 # EcomSdkAndroidDocs
 
-##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
+##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start_android) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
 ---
 Hабор средств для разработки.  
 
