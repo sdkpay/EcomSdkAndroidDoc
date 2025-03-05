@@ -8,6 +8,8 @@
 
 ## Подключение SDK к проекту
 
+Подключите SDK одним из удобных Вам способов: [Maven](https://sdkpay.github.io/EcomSdkAndroidDoc/start#Maven) / [Aar](https://sdkpay.github.io/EcomSdkAndroidDoc/start#Aar)
+
 ### Maven
 Для получения зависимости из maven репозитория необходимо добавить его в **settings.gradle** файл вашего приложения
 ```
