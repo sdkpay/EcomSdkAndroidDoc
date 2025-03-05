@@ -1,11 +1,9 @@
-# [EcomSdkAndroidDocs](https://sdkpay.github.io/EcomSdkAndroidDocs)
+# [EcomSdkAndroidDoc](https://sdkpay.github.io/EcomSdkAndroidDoc)
 
-##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
+##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
-## Платформа для интеграции SDK
-###### [Android](https://sdkpay.github.io/EcomSdkAndroidDocs/start_android) | [IOS](https://sdkpay.github.io/EcomSdkAndroidDocs/start_ios) | [Flutter](https://sdkpay.github.io/EcomSdkAndroidDocs/start_flutter) | [React-Native](https://sdkpay.github.io/EcomSdkAndroidDocs/start_react-native)
----
-# Начало работы для Android
+
+# Начало работы
 > Минимальная версия SDK - API 24
 
 ## Подключение SDK к проекту
@@ -27,7 +25,7 @@ dependencyResolutionManagement {
     }
 }
 ```
-Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости внутрь блока **dependencies { ... }**
+Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости внутрь блока `dependencies { ... }`
 ```
 dependencies {
     ...
@@ -38,7 +36,7 @@ dependencies {
 
 ### AAR
 Пакет дистрибуции состоит из файла *sdk-version.aar*, который необходимо разместить в директории **../libs** в корне проекта.
-Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока **dependencies { ... }**
+Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока `dependencies { ... }`
 
 > Также здесь необходимо явно добавить транзитивные зависимости библиотек
 
@@ -85,18 +83,18 @@ implementation("com.google.dagger:dagger:2.48")
 ksp("com.google.dagger:dagger-compiler:2.48")
 ```
 
-В приведенном выше примере указан путь к aar-файлам, находящимся в директории libs проекта. Если вы разместили их в другом месте, то нужно будет указать ваш путь к файлам. Подробнее смотрите в [документации для Android](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
+В приведенном выше примере указан путь к *aar-файлам*, находящимся в директории *libs* проекта. Если вы разместили их в другом месте, то нужно будет указать ваш путь к файлам. Подробнее смотрите в [документации для Android](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
 
 ## Настройка SDK
 
-Для инициализации SDK необходимо вызвать метод **setup** и передать в него **[EcomSdkSetupConfig](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdksetupconfig)**
+Для инициализации SDK необходимо вызвать метод `setup` и передать в него **[EcomSdkSetupConfig](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdksetupconfig)**
 
 ### Kotlin
 ```
 import modern.payments.ecomAndroid.EcomSdk
 import modern.payments.ecomAndroid.api.EcomSdkSetupConfig
 import modern.payments.ecomAndroid.api.EcomSdkStage
-
+k
 val config = EcomSdkSetupConfig(
     context = context,
     stage = EcomSdkStage.PROD,
