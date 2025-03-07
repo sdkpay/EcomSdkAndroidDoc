@@ -9,13 +9,13 @@
 
 #### Конфиг для инициализации SDK
 
-|Параметр|Тип|Обязательный|Описание|
-|---|---|---|---|
-|context|Context|Да|Context или ApplicationContext приложения|
-|stage|EcomSdkStage|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)|
-|disabledFeatures|List\<EcomSdkFeature\>|Нет|Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)|
-|enableLoggingByMerchant|Boolean|Нет|Флаг включенного логирования для партнера. Дефолтное значение true|
-|callback|(Boolean) -> Unit|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
+|Параметр|Тип|Дефолтное значение|Обязательный|Описание|
+|---|:---:|:---:|:---:|---|
+|context|Context|-|Да|Context или ApplicationContext приложения|
+|stage|EcomSdkStage|-|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)|
+|disabledFeatures|List\<EcomSdkFeature\>|listOf()|Нет|Список выключенных features.<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)|
+|enableLoggingByMerchant|Boolean|false|Нет|Флаг включенного логирования для партнера|
+|callback|(Boolean) -> Unit|-|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
 
 ## EcomSdkStage
 
@@ -55,15 +55,15 @@ enum class EcomSdkFeature {
 
 #### Конфиг для запуска сценария оплаты методом `pay()`
 
-|Параметр|Тип|Обязательный|Описание|
-|---|---|---|---|
-|context|Context|Да|ActivityContext приложения|
-|bankInvoiceId|String|Да|Уникальный идентификатор заказа в Платежном шлюзе Банка. Необходимо передавать значение sbolBankInvoiceId из ответа на Запрос регистрации заказа|
-|apiKey|String|Да|Ключ для работы с сервисами платежного шлюза через SDK|
-|merchantLogin|String|Да|Логин для работы с сервисами платежного шлюза|
-|orderNumber|String|Да|Уникальный идентификатор заказа в системе Партнера|
-|appPackageName|String|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
-|callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)|
+|Параметр|Тип|Дефолтное значение|Обязательный|Описание|
+|---|:---:|:---:|:---:|---|
+|context|Context|-|Да|ActivityContext приложения|
+|bankInvoiceId|String|-|Да|Уникальный идентификатор заказа в Платежном шлюзе Банка. Необходимо передавать значение sbolBankInvoiceId из ответа на Запрос регистрации заказа|
+|apiKey|String|-|Да|Ключ для работы с сервисами платежного шлюза через SDK|
+|merchantLogin|String|-|Да|Логин для работы с сервисами платежного шлюза|
+|orderNumber|String|-|Да|Уникальный идентификатор заказа в системе Партнера|
+|appPackageName|String|-|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
+|callback|(EcomSdkResult) -> Unit|-|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)|
 
 ## EcomSdkResult
 
