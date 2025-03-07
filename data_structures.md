@@ -103,6 +103,26 @@ sealed interface EcomSdkResult {
 } 
 ```
 
+## AnalyticalEvent
+
+#### Структура бизнес метрик для партнера
+```
+/**
+ * Класс данных описывающий отправляемые события в аналитику для партнера
+ *
+ * @param action аналитическое событие
+ * @param httpCode код запроса https
+ * @param errorCode внутренний код ошибки
+ * @param description описание ошибки
+ */
+data class AnalyticalEvent(
+    val action: String,
+    val httpCode: Int? = null,
+    val errorCode: String? = null,
+    val description: String? = null,
+)
+```
+
 ## Платежные инструменты для работы в режиме песочницы
 
 | Тип тестирования | Номер карты | Срок действия карты | CVV |  SMS-код | Пароль |
@@ -110,4 +130,3 @@ sealed interface EcomSdkResult {
 | Без 3ds | 4279380620378929 | 06/26 | 353 | нет | нет |
 | С 3ds | 2202208020207685 | 05/27 | 133 | 111111 | нет |
 | С 3ds | 2201382000000047 | 05/27 | 133 | нет | 1qwezxc |
-
