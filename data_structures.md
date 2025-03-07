@@ -63,7 +63,7 @@ enum class EcomSdkFeature {
 |merchantLogin|String|Да|Логин для работы с сервисами платежного шлюза|
 |orderNumber|String|Да|Уникальный идентификатор заказа в системе Партнера|
 |appPackageName|String|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
-|callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkresult)|
+|callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)|
 
 ## EcomSdkResult
 
