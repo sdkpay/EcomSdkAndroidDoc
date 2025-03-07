@@ -1,22 +1,26 @@
-# EcomSdkAndroidDocs
+# EcomSdkAndroidDoc
 
-##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDocs/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDocs/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDocs/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDocs/version)
+##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
+
 # Вспомогательные структуры данных
 
 ## EcomSdkSetupConfig
+
 #### Конфиг для инициализации SDK
 
 |Параметр|Тип|Обязательный|Описание|
 |---|---|---|---|
 |context|Context|Да|Context или ApplicationContext приложения|
-|stage|EcomSdkStage|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkstage)|
-|disabledFeatures|List\<EcomSdkFeature\>|Нет|Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkfeature)|
+|stage|EcomSdkStage|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)|
+|disabledFeatures|List\<EcomSdkFeature\>|Нет|Список выключенных features. Дефолтное значение listOf().<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)|
 |enableLoggingByMerchant|Boolean|Нет|Флаг включенного логирования для партнера. Дефолтное значение true|
 |callback|(Boolean) -> Unit|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
 
 ## EcomSdkStage
+
 #### Стенды SDK
+
 ```
 /**
  * Enum со стендами SDK
@@ -30,7 +34,9 @@ public enum class EcomSdkStage: Stage {
 ```
 
 ## EcomSdkFeature
+
 #### Фичи SDK
+
 ```
 /**
  * Enum с фичами SDK
@@ -46,7 +52,8 @@ enum class EcomSdkFeature {
 ```
 
 ## EcomSdkMerchantOptionsConfig
-#### Конфиг для запуска сценария оплаты методом *pay()*
+
+#### Конфиг для запуска сценария оплаты методом `pay()`
 
 |Параметр|Тип|Обязательный|Описание|
 |---|---|---|---|
@@ -59,7 +66,8 @@ enum class EcomSdkFeature {
 |callback|(EcomSdkResult) -> Unit|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDocs/data_structures#ecomsdkresult)|
 
 ## EcomSdkResult
-#### Результат выполнения метода *pay()*
+
+#### Результат выполнения метода `pay()`
 
 ```
 /**
