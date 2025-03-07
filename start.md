@@ -4,13 +4,15 @@
 ---
 
 # Начало работы
+
 > Минимальная версия SDK - API 24
 
 ## Подключение SDK к проекту
 
-Подключите SDK одним из удобных Вам способов: [Maven](https://sdkpay.github.io/EcomSdkAndroidDoc/start#Maven) / [Aar](https://sdkpay.github.io/EcomSdkAndroidDoc/start#Aar)
+Подключите SDK одним из удобных Вам способов: [Maven](https://sdkpay.github.io/EcomSdkAndroidDoc/start#maven) / [Aar](https://sdkpay.github.io/EcomSdkAndroidDoc/start#aar)
 
 ### Maven
+
 Для получения зависимости из maven репозитория необходимо добавить его в **settings.gradle** файл вашего приложения
 ```
 dependencyResolutionManagement {
@@ -37,6 +39,7 @@ dependencies {
 ```
 
 ### AAR
+
 Пакет дистрибуции состоит из файла *sdk-version.aar*, который необходимо разместить в директории **../libs** в корне проекта.
 Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока `dependencies { ... }`
 
@@ -92,6 +95,7 @@ ksp("com.google.dagger:dagger-compiler:2.48")
 Для инициализации SDK необходимо вызвать метод `setup` и передать в него **[EcomSdkSetupConfig](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdksetupconfig)**
 
 ### Kotlin
+
 ```
 import modern.payments.ecomAndroid.EcomSdk
 import modern.payments.ecomAndroid.api.EcomSdkSetupConfig
@@ -109,6 +113,7 @@ EcomSdk.getInstance().setup(config)
 ```
 
 ### Java
+
 ```
 import modern.payments.ecomAndroid.EcomSdk;
 import modern.payments.ecomAndroid.api.EcomSdkSetupConfig;
