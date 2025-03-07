@@ -14,8 +14,9 @@
 |context|Context|-|Да|Context или ApplicationContext приложения|
 |stage|EcomSdkStage|-|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)|
 |disabledFeatures|List\<EcomSdkFeature\>|listOf()|Нет|Список выключенных features.<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)|
-|enableLoggingByMerchant|Boolean|false|Нет|Флаг включенного логирования для партнера|
+|enableLogging|Boolean|false|Нет|Флаг включенного логирования для партнера|
 |callback|(Boolean) -> Unit|-|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
+|metricCallback|(Pair<AnalyticalEvent, Int>) -> Unit|null|Нет|Блок, отбрасывающий аналитические бизнес метрики при прохождении сценария SDK.<br>Структура [AnalyticalEvent](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#analyticalevent)|
 
 ## EcomSdkStage
 
@@ -48,6 +49,8 @@ enum class EcomSdkFeature {
     PAY_BY_SBP,
     /** Приём платежей через SPaySDK */
     PAY_BY_SPAY,
+    /** Прием платежей картами */
+    BINDING,
 }
 ```
 
