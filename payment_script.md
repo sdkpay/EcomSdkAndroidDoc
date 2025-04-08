@@ -3,6 +3,8 @@
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
 
+<br>
+
 # Сценарий оплаты
 
 Для запуска сценария оплаты SDK необходимо вызвать метод `pay` и передать в него **[EcomSdkMerchantOptionsConfig](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkmerchantoptionsconfig)**

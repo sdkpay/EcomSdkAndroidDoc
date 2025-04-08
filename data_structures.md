@@ -3,6 +3,8 @@
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
 
+<br>
+
 # Вспомогательные структуры данных
 
 ## EcomSdkSetupConfig
@@ -17,6 +19,8 @@
 |enableLogging|Boolean|false|Нет|Флаг включенного логирования для партнера|
 |callback|(Boolean) -> Unit|-|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
 |metricCallback|(Pair<AnalyticalEvent, Int>) -> Unit|null|Нет|Блок, отбрасывающий аналитические бизнес метрики при прохождении сценария SDK.<br>Структура [AnalyticalEvent](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#analyticalevent)|
+
+<br>
 
 ## EcomSdkStage
 
@@ -33,6 +37,8 @@ public enum class EcomSdkStage: Stage {
     SandBox
 }
 ```
+
+<br>
 
 ## EcomSdkFeature
 
@@ -54,9 +60,11 @@ enum class EcomSdkFeature {
 }
 ```
 
+<br>
+
 ## EcomSdkMerchantOptionsConfig
 
-#### Конфиг для запуска сценария оплаты методом `pay()`
+#### Конфиг для запуска сценария оплаты методом `pay`
 
 |Параметр|Тип|Дефолтное значение|Обязательный|Описание|
 |---|:---:|:---:|:---:|---|
@@ -68,9 +76,11 @@ enum class EcomSdkFeature {
 |appPackageName|String|-|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
 |callback|(EcomSdkResult) -> Unit|-|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)|
 
+<br>
+
 ## EcomSdkResult
 
-#### Результат выполнения метода `pay()`
+#### Результат выполнения метода `pay`
 
 ```
 /**
@@ -103,6 +113,8 @@ sealed interface EcomSdkResult {
 } 
 ```
 
+<br>
+
 ## AnalyticalEvent
 
 #### Структура бизнес метрик для партнера
@@ -122,6 +134,8 @@ data class AnalyticalEvent(
     val description: String? = null,
 )
 ```
+
+<br>
 
 ## Платежные инструменты для работы в режиме песочницы
 

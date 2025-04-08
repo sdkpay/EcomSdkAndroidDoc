@@ -3,6 +3,8 @@
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
 
+<br>
+
 # Актуальная версия
 
 ## Версия 1.1
@@ -35,6 +37,8 @@
 - Реализован функционал оплаты с помощью SberPay
 - Удален Timber как способ вывода логов для партнеров. Теперь используется стандартный механизм логирования
 - Добавлена анимация перехода между экранами
+
+<br>
 
 ## Версия 1.0
 

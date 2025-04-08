@@ -3,9 +3,13 @@
 ##### [Начало работы](https://sdkpay.github.io/EcomSdkAndroidDoc/start) | [Сценарий оплаты](https://sdkpay.github.io/EcomSdkAndroidDoc/payment_script) | [Работа в режиме песочницы](https://sdkpay.github.io/EcomSdkAndroidDoc/sandbox_mode) | [Вспомогательные структуры данных](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures) | [Актуальная версия SDK](https://sdkpay.github.io/EcomSdkAndroidDoc/version)
 ---
 
+<br>
+
 # Начало работы
 
 > Минимальная версия SDK - API 24
+
+<br>
 
 ## Подключение SDK к проекту
 
@@ -29,7 +33,7 @@ dependencyResolutionManagement {
     }
 }
 ```
-Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости внутрь блока `dependencies { ... }`
+Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости внутрь блока `dependencies`
 ```
 dependencies {
     ...
@@ -41,7 +45,7 @@ dependencies {
 ### AAR
 
 Пакет дистрибуции состоит из файла *sdk-version.aar*, который необходимо разместить в директории **../libs** в корне проекта.
-Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока `dependencies { ... }`
+Далее нужно перейти в **build.gradle** вашего модуля и добавить зависимости от *.aar-файлов* внутрь блока `dependencies`
 
 > Также здесь необходимо явно добавить транзитивные зависимости библиотек
 
@@ -89,6 +93,8 @@ ksp("com.google.dagger:dagger-compiler:2.48")
 ```
 
 В приведенном выше примере указан путь к *aar-файлам*, находящимся в директории *libs* проекта. Если вы разместили их в другом месте, то нужно будет указать ваш путь к файлам. Подробнее смотрите в [документации для Android](https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency)
+
+<br>
 
 ## Настройка SDK
 
