@@ -28,8 +28,8 @@
 Идентификатор сессии (`localSessionId`) создается при каждой попытке оплаты через Ecom SDK. Идентификатор используется для разбора инцидентов и отладки работы SDK. `LocalSessionId` можно найти в следующих компонентах:
 - На экране загрузки SDK после старта оплаты:
 
-<img src="docs/assets/img/load-pay.png" width="200">
+<img src="docs/assets/img/Loading.png" width="200">
 
 - На результирующем экране ошибки:
 
-<img src="docs/assets/img/fail-pay.png" width="200">
+<img src="docs/assets/img/Error.png" width="200">
