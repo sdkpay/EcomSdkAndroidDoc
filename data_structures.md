@@ -83,33 +83,54 @@ enum class EcomSdkFeature {
 
 ```
 /**
-* Возможные результаты проведения оплаты
-*
-* @property Success оплата произведена успешно
-* @property Waiting статус оплаты неизвестен
-* @property Cancel оплата отменена пользователем
-* @property Error оплата не была выполнена из-за ошибки
-*/
-sealed interface EcomSdkResult {
-    data object Success : EcomSdkResult
+     * Возможные результаты проведения оплаты
+     *
+     * @property Success оплата произведена успешно
+     * @property Waiting статус оплаты неизвестен
+     * @property Cancel оплата отменена пользователем
+     * @property Error оплата не была выполнена из-за ошибки
+     *
+     * @param localSessionId уникальный номер сессии оплаты через SDK
+     */
+    sealed class EcomSdkResult(open var localSessionId: String? = null) {
+        data class Success(override var localSessionId: String? = null) : EcomSdkResult(localSessionId)
 
-    data object Waiting : EcomSdkResult
+        /**
+         * Класс неизвестного статуса оплаты при работе с EcomSdk
+         *
+         * @param httpCode код ответа http
+         * @param errorCode внутренний код ответа от севера
+         * @param description описание ошибки
+         * @param bankInvoiceId уникальный номер заказа в системе банка
+         * @param localSessionId уникальный номер сессии оплаты через SDK
+         */
+        data class Waiting(
+            val httpCode: String? = null,
+            val errorCode: String? = null,
+            val description: String? = null,
+            val bankInvoiceId: String? = null,
+            override var localSessionId: String? = null,
+        ) : EcomSdkResult(localSessionId)
 
-    data object Cancel : EcomSdkResult
+        data class Cancel(override var localSessionId: String? = null) : EcomSdkResult(localSessionId)
 
-    /**
-    * Класс ошибки при работе с EcomSdk
-    *
-    * @param httpCode код ответа http
-    * @param errorCode внутренний код ответа от севера
-    * @param description описание ошибки
-    */
-    data class Error(
-        val httpCode: String? = null,
-        val errorCode: String? = null,
-        val description: String? = null
-    ) : EcomSdkResult
-} 
+        /**
+         * Класс ошибки при работе с EcomSdk
+         *
+         * @param httpCode код ответа http
+         * @param errorCode внутренний код ответа от севера
+         * @param description описание ошибки
+         * @param bankInvoiceId уникальный номер заказа в системе банка
+         * @param localSessionId уникальный номер сессии оплаты через SDK
+         */
+        data class Error(
+            val httpCode: String? = null,
+            val errorCode: String? = null,
+            val description: String? = null,
+            val bankInvoiceId: String? = null,
+            override var localSessionId: String? = null,
+        ) : EcomSdkResult(localSessionId)
+    } 
 ```
 
 <br>

@@ -33,3 +33,9 @@
 - На результирующем экране ошибки:
 
 <img src="docs/assets/img/Error.png" width="200">
+
+- На результирующем экране успешной оплаты:
+
+<img src="docs/assets/img/Success.jpeg" width="200">
+
+- В коллбеке методов оплаты: <br>Структура [EcomSdkResult] (https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)
