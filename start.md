@@ -105,14 +105,14 @@ ksp("com.google.dagger:dagger-compiler:2.48")
 import modern.payments.ecomAndroid.EcomSdk
 import modern.payments.ecomAndroid.api.EcomSdkSetupConfig
 import modern.payments.ecomAndroid.api.EcomSdkStage
-k
+
 val config = EcomSdkSetupConfig(
     context = context,
     stage = EcomSdkStage.PROD,
     disabledFeatures = listOf(),
     enableLoggingByMerchant = true,
-    callback = { isSetupSucceed ->
-})
+    callback = { isSetupSucceed -> }
+)
 
 EcomSdk.getInstance().setup(config)
 ```

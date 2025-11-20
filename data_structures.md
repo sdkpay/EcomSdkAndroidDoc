@@ -10,14 +10,159 @@
 
 #### Конфиг для инициализации SDK
 
-|Параметр|Тип|Дефолтное значение|Обязательный|Описание|
-|---|:---:|:---:|:---:|---|
-|context|Context|-|Да|Context или ApplicationContext приложения|
-|stage|EcomSdkStage|-|Да|Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)|
-|disabledFeatures|List\<EcomSdkFeature\>|listOf()|Нет|Список выключенных features.<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)|
-|enableLogging|Boolean|false|Нет|Флаг включенного логирования для партнера|
-|callback|(Boolean) -> Unit|-|Да|Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true|
-|metricCallback|(Pair<AnalyticalEvent, Int>) -> Unit|null|Нет|Блок, отбрасывающий аналитические бизнес метрики при прохождении сценария SDK.<br>Структура [AnalyticalEvent](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#analyticalevent)|
+|Параметр|Тип|Дефолтное значение| Обязательный | Описание                                                                                                                                                                                  |
+|---|:---:|:---:|:------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|context|Context|-|      Да      | Context или ApplicationContext приложения                                                                                                                                                 |
+|ecomUiPreferences|EcomUiPreferences|-|     нет      | Настройки для уникализации интерфейса EcomUiPreferences.<br> [EcomUiPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUiPreferences)                            |                                                                                                                                                             |
+|stage|EcomSdkStage|-|      Да      | Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)                                                 |
+|disabledFeatures|List\<EcomSdkFeature\>|listOf()|     Нет      | Список выключенных features.<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)                                                     |
+|enableLogging|Boolean|false|     Нет      | Флаг включенного логирования для партнера                                                                                                                                                 |
+|callback|(Boolean) -> Unit|-|      Да      | Блок, отрабатыващий после настройки SDK. Корректное значение колбэка true                                                                                                                 |
+|metricCallback|(Pair<AnalyticalEvent, Int>) -> Unit|null|     Нет      | Блок, отбрасывающий аналитические бизнес метрики при прохождении сценария SDK.<br>Структура [AnalyticalEvent](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#analyticalevent) |
+
+<br>
+
+## EcomUiPreferences
+
+#### Параметры кастомизации UI EcomSdk
+
+```
+/**
+ * Параметры кастомизации EcomSdk
+ */
+data class EcomUiPreferences(
+    /**
+     * Настройки светлой темы 
+     * Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
+    /*
+    val lightTheme: EcomUIColorPreferences? = null,
+    /**
+     * Настройки темной темы
+     * Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
+     */
+    val darkTheme: EcomUIColorPreferences? = null,
+    /**
+     * Общие настройки
+     * Структура [EcomUICommonPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUICommonPreferences)
+     */
+    val common: EcomUICommonPreferences? = null
+)
+```
+
+<br>
+
+## EcomUIColorPreferences
+
+#### Параметры кастомизации цветовой схемы UI EcomSdk
+
+```
+/**
+ * Настройки цветов
+ */
+class EcomUIColorPreferences(
+    /**
+     * Цвет поля ввода в формате RGB (#FFFFFF)
+     */
+     inputBG: String? = null,
+        
+    /**
+     * Цвет основного бэкграунда в формате RGB (#FFFFFF)
+     */
+    mainBG: String? = null,
+      
+    /**
+     * Основной цвет текста в формате RGB (#FFFFFF)
+     */
+     textPrimary: String? = null,
+
+    /**
+     * Вторичный цвет текста в формате RGB (#FFFFFF)
+     */
+    textSecondary: String? = null,
+
+    /**
+     * Цвет успешного выполнения в формате RGB (#FFFFFF)
+     */
+    accentSuccess: String? = null,
+
+    /**
+     * Цвет ошибки в формате RGB (#FFFFFF)
+     */
+    accentError: String? = null,
+
+    /**
+     * Цвет для анимации загрузки в формате RGB (#FFFFFF)
+     */
+    loader: String? = null,
+
+    /**
+     * Цвет для вторичных кнопок в формате RGB (#FFFFFF)
+     */
+    buttonSecondary: String? = null,
+
+    /**
+     * Ссылка на иконка мерчанта (URL)
+     */
+    merchantIcon: String? = null,
+)
+```
+
+<br>
+
+## EcomUICommonPreferences
+
+#### Общие параметры кастомизации UI EcomSdk
+
+```
+/**
+ * Общие настройки UI EcomSdk
+ */
+data class EcomUICommonPreferences(
+    /**
+     * Размер радиуса углов элементов
+     * Структура [SBRadiusSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbRadiusSize)
+     */
+    val radiusSize: SBRadiusSize? = SBRadiusSize.M,
+    
+    /**
+     * Размер текста
+     * Структура [SBTextSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbTextSize)
+     */
+    val textSize: SBTextSize? = SBTextSize.M,
+)
+```
+
+<br>
+
+## SBRadiusSize
+
+#### Радиус для элементов UI EcomSdk
+
+```
+/**
+ * Размер радиуса углов элементов
+ */
+enum class SBRadiusSize(val value: String) {
+    S("s"),
+    M("m"),
+    L("l"),
+}
+```
+
+## SBTextSize
+
+#### Радиус для элементов UI EcomSdk
+
+```
+/**
+ * Размер текста
+ */
+enum class SBTextSize(val value: String) {
+    S("s"),
+    M("m"),
+    L("l"),
+}
+```
 
 <br>
 
@@ -56,6 +201,8 @@ enum class EcomSdkFeature {
     PAY_BY_SPAY,
     /** Прием платежей картами */
     BINDING,
+    /** Оплата новой картой */
+    NEW_CARD
 }
 ```
 
@@ -65,15 +212,70 @@ enum class EcomSdkFeature {
 
 #### Конфиг для запуска сценария оплаты методом `pay`
 
-|Параметр|Тип|Дефолтное значение|Обязательный|Описание|
-|---|:---:|:---:|:---:|---|
-|context|Context|-|Да|ActivityContext приложения|
-|bankInvoiceId|String|-|Да|Уникальный идентификатор заказа в Платежном шлюзе Банка. Необходимо передавать значение sbolBankInvoiceId из ответа на Запрос регистрации заказа|
-|apiKey|String|-|Да|Ключ для работы с сервисами платежного шлюза через SDK|
-|merchantLogin|String|-|Да|Логин для работы с сервисами платежного шлюза|
-|orderNumber|String|-|Да|Уникальный идентификатор заказа в системе Партнера|
-|appPackageName|String|-|Да|Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн|
-|callback|(EcomSdkResult) -> Unit|-|Да|Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult)|
+|Параметр|Тип|Дефолтное значение| Обязательный | Описание                                                                                                                                                                                                 |
+|---|:---:|:---:|:------------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|context|Context|-|      Да      | ActivityContext приложения                                                                                                                                                                               |
+|bankInvoiceId|String|-|      Да      | Уникальный идентификатор заказа в Платежном шлюзе Банка. Необходимо передавать значение sbolBankInvoiceId из ответа на Запрос регистрации заказа                                                         |
+|apiKey|String|-|      Да      | Ключ для работы с сервисами платежного шлюза через SDK                                                                                                                                                   |
+|merchantLogin|String|-|      Да      | Логин для работы с сервисами платежного шлюза                                                                                                                                                            |
+|orderNumber|String|-|      Да      | Уникальный идентификатор заказа в системе Партнера                                                                                                                                                       |
+|appPackageName|String|-|      Да      | Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн                                                |
+|preferredSPayMethod|EcomSPayMethod|-|     Нет      | Предпочитаемый метод для оплаты через SPaySdk<br>Структура [EcomSPayMethod](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomSPayMethod)                                                   |                                                                                                                                                            |
+|callback|(EcomSdkResult) -> Unit|-|      Да      | Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult) |
+
+<br>
+
+## EcomSPayMethod
+
+#### Доступные способы оплаты через SPaySdk
+
+```
+sealed interface EcomSPayMethod : Parcelable {
+    /**
+     * Оплата с использованием 6-ти частей и обычной оплатой (без paymentToken и paymentOrder)
+     */
+    object Default : EcomSPayMethod
+    
+    /**
+     * Оплата с параметрами для проведения оплаты (с paymentToken и paymentOrder)
+     */
+    object WithBankInvoiceId : EcomSPayMethod
+    
+    /**
+     * Оплата со списанием бонусов Спасибо
+     */
+    object WithBonuses : EcomSPayMethod
+    
+    /**
+     * Оплата без рефреша с использованием 6-ти частей и обычной оплатой (без paymentToken и paymentOrder)
+     */
+    object WithoutRefresh : EcomSPayMethod
+    
+    /**
+     * Оплата с использованием платежного счета  
+     */
+    object WithPaymentAccount: EcomSPayMethod
+    
+    /**
+     * Оплата с использованием платежа на 6 частей
+     */
+    object WithPartPay: EcomSPayMethod
+
+    /**
+     * Оплата по связке
+     *
+     * @param bindingId Уникальный идентификатор связки
+     */
+    data class WithBinding(val bindingId: String): EcomSPayMethod
+
+    /**
+     * Оплата с авторизацией только по номеру телефона
+     *
+     * @param phoneNumber Номер телефона
+     */
+    data class WithPhoneNumber(val phoneNumber: String): EcomSPayMethod
+}
+```
 
 <br>
 
