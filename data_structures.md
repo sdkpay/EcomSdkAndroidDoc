@@ -33,21 +33,21 @@
 data class EcomUiPreferences(
     /**
      * Настройки светлой темы 
-     * Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
     /*
     val lightTheme: EcomUIColorPreferences? = null,
     /**
      * Настройки темной темы
-     * Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
      */
     val darkTheme: EcomUIColorPreferences? = null,
     /**
      * Общие настройки
-     * Структура [EcomUICommonPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUICommonPreferences)
      */
     val common: EcomUICommonPreferences? = null
 )
 ```
+
+Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
+Структура [EcomUICommonPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUICommonPreferences)
 
 <br>
 
@@ -120,17 +120,18 @@ class EcomUIColorPreferences(
 data class EcomUICommonPreferences(
     /**
      * Размер радиуса углов элементов
-     * Структура [SBRadiusSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbRadiusSize)
      */
     val radiusSize: SBRadiusSize? = SBRadiusSize.M,
     
     /**
      * Размер текста
-     * Структура [SBTextSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbTextSize)
      */
     val textSize: SBTextSize? = SBTextSize.M,
 )
 ```
+
+Структура [SBRadiusSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbRadiusSize)
+Структура [SBTextSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbTextSize)
 
 <br>
 
