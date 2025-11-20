@@ -13,7 +13,7 @@
 |Параметр|Тип|Дефолтное значение| Обязательный | Описание                                                                                                                                                                                  |
 |---|:---:|:---:|:------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |context|Context|-|      Да      | Context или ApplicationContext приложения                                                                                                                                                 |
-|ecomUiPreferences|EcomUiPreferences|-|     нет      | Настройки для уникализации интерфейса EcomUiPreferences.<br> [EcomUiPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUiPreferences)                            |                                                                                                                                                             |
+|ecomUiPreferences|EcomUiPreferences|-|     нет      | Настройки для уникализации интерфейса EcomUiPreferences.<br> [EcomUiPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomuipreferences)                            |                                                                                                                                                             |
 |stage|EcomSdkStage|-|      Да      | Список стендов для работы с EcomSdk.<br>Структура [EcomSdkStage](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkstage)                                                 |
 |disabledFeatures|List\<EcomSdkFeature\>|listOf()|     Нет      | Список выключенных features.<br>Структура [EcomSdkFeature](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkfeature)                                                     |
 |enableLogging|Boolean|false|     Нет      | Флаг включенного логирования для партнера                                                                                                                                                 |
@@ -46,8 +46,8 @@ data class EcomUiPreferences(
 )
 ```
 
-Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUIColorPreferences)
-Структура [EcomUICommonPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomUICommonPreferences)
+Структура [EcomUIColorPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomuicolorpreferences)
+Структура [EcomUICommonPreferences](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomuicolorpreferences)
 
 <br>
 
@@ -130,8 +130,8 @@ data class EcomUICommonPreferences(
 )
 ```
 
-Структура [SBRadiusSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbRadiusSize)
-Структура [SBTextSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbTextSize)
+Структура [SBRadiusSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbradiussize)
+Структура [SBTextSize](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#sbtextsize)
 
 <br>
 
@@ -221,7 +221,7 @@ enum class EcomSdkFeature {
 |merchantLogin|String|-|      Да      | Логин для работы с сервисами платежного шлюза                                                                                                                                                            |
 |orderNumber|String|-|      Да      | Уникальный идентификатор заказа в системе Партнера                                                                                                                                                       |
 |appPackageName|String|-|      Да      | Package (BuildConfig.APPLICATION_ID) приложения, по которому необходимо вернуть Плательщика в приложение Партнера, после аутентификации в СберБанк Онлайн                                                |
-|preferredSPayMethod|EcomSPayMethod|-|     Нет      | Предпочитаемый метод для оплаты через SPaySdk<br>Структура [EcomSPayMethod](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomSPayMethod)                                                   |                                                                                                                                                            |
+|preferredSPayMethod|EcomSPayMethod|-|     Нет      | Предпочитаемый метод для оплаты через SPaySdk<br>Структура [EcomSPayMethod](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomspaymethod)                                                   |                                                                                                                                                            |
 |callback|(EcomSdkResult) -> Unit|-|      Да      | Блок, отрабатыващий после завершения сценария оплаты Плательщиком, возвращающий результат оплаты.<br>Структура [EcomSdkResult](https://sdkpay.github.io/EcomSdkAndroidDoc/data_structures#ecomsdkresult) |
 
 <br>
